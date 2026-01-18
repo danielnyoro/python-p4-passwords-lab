@@ -14,6 +14,7 @@ class TestApp:
         
         with app.app_context():
             
+            db.create_all()
             User.query.delete()
             db.session.commit()
         
@@ -31,6 +32,7 @@ class TestApp:
         '''logs users in with a username and password at /login.'''
         with app.app_context():
             
+            db.create_all()
             User.query.delete()
             db.session.commit()
         
@@ -56,6 +58,7 @@ class TestApp:
         '''logs users out at /logout.'''
         with app.app_context():
             
+            db.create_all()
             User.query.delete()
             db.session.commit()
         
@@ -87,6 +90,7 @@ class TestApp:
 
         with app.app_context():
             
+            db.create_all()
             User.query.delete()
             db.session.commit()
         
